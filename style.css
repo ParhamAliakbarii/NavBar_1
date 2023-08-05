@@ -1,0 +1,146 @@
+
+/* THIS PROJECT WAS DESIGNED TO WORK WITH SELECTORS & PSEUDO-CLASS */
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color:#bcaaa4;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    height: 100px;
+    min-width: 400px;
+    padding-left: 35px;
+    padding-right: 35px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efebe9;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px #8d6e63;
+}
+
+.navbar::after{
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    height: 4px;
+    width: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#4e342e;
+    opacity: 0.3;
+}
+
+.circle{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+    margin-bottom: 0;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color:#4e342e;
+    z-index: 9;
+    box-shadow: 0 5px 5px #4e342e;
+    transition:  height 0.3 ease;
+}
+
+.circle:hover{
+    height: 200px;
+    border-radius: 50px;
+}
+.circle .plus-icon{
+    color: #fff;
+    font-size: 27px;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.circle:hover .plus-icon{
+    transform: rotate(300deg);
+    opacity: 0;
+}
+.circle .social{
+    position: absolute;
+    top: 195px;
+    color:#795548;
+    background-color:#d7ccc8 ;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.circle .social:nth-child(2){
+    opacity: 0;
+    transition: opacity 0.3s, top 0.5s ease;
+}
+
+.circle .social:nth-child(3){
+    opacity: 0;
+    transition: opacity 0.3s, top 0.1s ease;
+}
+
+.circle .social:nth-child(4){
+    opacity: 0;
+    transition: opacity 0.3s, top 0.22s ease;
+}
+
+.circle:hover .social:nth-child(2){
+    opacity: 1;
+    top:5px;
+}
+
+.circle:hover .social:nth-child(3){
+    opacity: 1;
+    top: calc(5px + 60px + 5px);
+}
+
+.circle:hover .social:nth-child(4){
+    opacity: 1;
+    top: calc(5px + 60px + 5px + 60px + 5px);
+}
+
+.circlebackground{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+    margin-bottom: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color:#bcaaa4;
+}
+
+.icon-home, .icon-setting{
+    font-size: 30px;
+    color: #795548;
+    cursor: pointer;
+}
